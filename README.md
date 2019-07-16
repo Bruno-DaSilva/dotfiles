@@ -17,5 +17,5 @@ At the moment, this does not actually contained dotfiles, but just my current .z
 ## For Ubuntu/GUI (non-ssh'ing servers) installs
 * You'll have to install zsh without brew.
 * GUI ONLY: gnome-terminal is used instead of iterm. For the same theme setup, use the gnome-terminal dump with:
-  * `dconf load /org/gnome/terminal/legacy/profiles:/ > gnome-terminal-profiles.dconf`.
+  * `dconf load /org/gnome/terminal/legacy/profiles:/ < gnome-terminal-profiles.dconf`.
 * GUI ONLY: You'll have to install meslo nerd font without brew. One way is to clone the nerd-fonts repo and run `./install Meslo`.
