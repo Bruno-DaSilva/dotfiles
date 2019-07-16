@@ -14,8 +14,8 @@ At the moment, this does not actually contained dotfiles, but just my current .z
 9. Modify your iterm profile to use Meslo LG S DZ Regular Nerd Font Complete (not Monospaced). You can use any nerd font here (comes with extra symbols), but I prefer Meslo!
 10. Close/open your terminal!
 
-## For ubuntu gui installs
-* gnome-terminal is used instead of iterm. For the same theme setup, use the gnome-terminal dump with:
-  * `dconf load /org/gnome/terminal/legacy/profiles:/ > gnome-terminal-profiles.dconf`.
+## For Ubuntu/GUI (non-ssh'ing servers) installs
 * You'll have to install zsh without brew.
-* You'll have to install meslo nerd font without brew. One way is to clone the nerd-fonts repo and run `./install Meslo`.
+* GUI ONLY: gnome-terminal is used instead of iterm. For the same theme setup, use the gnome-terminal dump with:
+  * `dconf load /org/gnome/terminal/legacy/profiles:/ > gnome-terminal-profiles.dconf`.
+* GUI ONLY: You'll have to install meslo nerd font without brew. One way is to clone the nerd-fonts repo and run `./install Meslo`.
