@@ -1,6 +1,3 @@
-# Path to your oh-my-zsh installation.
-export ZSH="/home/bruno/.oh-my-zsh"
-
 # =============================================================================
 #                                   Plugins
 # =============================================================================
@@ -216,8 +213,6 @@ else
 fi
 
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-alias ssh-key-setup="ssh-add ~/.ssh/id_rsa ~/.ssh/bruno2.pem ~/.ssh/infl-bruno.pem ~/.ssh/infl-qa.pem"
-alias s="open -a Sublime\ Text"
 
 # =============================================================================
 #                                 Completions
@@ -239,56 +234,4 @@ zstyle ':completion:*:*:kill:*' menu yes select
 zstyle ':completion:*:kill:*'   force-list always
 
 ################# END CONFIGS
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-
-##### INFL RELATED
-export INFL_HOME="/Users/bruno/www/influitive"
-
-export RABBITMQ_DOCKER_HOME="$INFL_HOME/dockers/compositions/rabbitmq"
-export MONGO_DOCKER_HOME="$INFL_HOME/dockers/compositions/mongodb"
-export NARCI_LOCATION="$INFL_HOME/narci_service"
-export WALDO_LOCATION="$INFL_HOME/waldo"
-export WENDA_LOCATION="$INFL_HOME/wenda"
-export API_PROXY_LOCATION="$INFL_HOME/api-proxy"
-export HUB_LOCATION="$INFL_HOME/hub"
-export REDIRECTOR_LOCATION="$INFL_HOME/redirector"
-
-alias rabbit="cd $RABBITMQ_DOCKER_HOME && docker-compose up -d; cd -"
-alias mongo="cd $MONGO_DOCKER_HOME && docker-compose up -d; cd -"
-alias narci="cd $NARCI_LOCATION && ./start.sh; cd -"
-alias waldo="cd $WALDO_LOCATION && ./start.sh; cd -"
-alias api-proxy="cd $API_PROXY_LOCATION && ./start.sh; cd -"
-alias hub="cd $HUB_LOCATION && ./start.sh; cd -"
-alias wenda="cd $WENDA_LOCATION && ./start.sh; cd -"
-alias redirector="cd $REDIRECTOR_LOCATION && ./start.sh; cd -"
-
-alias servers="docker network create infl-services; rabbit && mongo && narci && waldo && wenda && hub && api-proxy"
-alias fixpow="sudo pfctl -f /etc/pf.conf; sudo pfctl -e"
-
-# docker
-alias dc='docker-compose '
-alias dc-run='dc run --rm '
-
-alias web-run='dc-run web '
-alias web-bundle='web-run bundle '
-alias web-rails='web-bundle exec rails '
-alias web-rake='web-bundle exec rake '
-alias web-rspec='web-bundle exec rspec '
-
-alias unisonrun='sudo /bin/bash -c "fswatch -r -o ~/www/influitive | while unison /Users/bruno/www/influitive ssh://root@bruno2.influitive.io//www/influitive -owner -group -times -batch; read num; do : ; done"'
-
-export MFA_DEVICE=arn:aws:iam::645720856124:mfa/Bruno
-export MFA_STS_DURATION=1800
-AWS_PROFILE=default
-
-##### END INFL RELATED
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-export SPARK_HOME=/usr/local/lib/python3.6/site-packages/pyspark/
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
-export PYSPARK_PYTHON='/usr/local/bin/python3'
 
