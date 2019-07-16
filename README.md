@@ -9,7 +9,7 @@ At the moment, this does not actually contained dotfiles, but just my current .z
 4. `brew install zsh`
 5. `./setup_zsh.sh`
 6. `cp .zshrc ~/.zshrc`
-7. You may want to copy any configs from your `~/.bashrc` and `~/.bash_profile` files, or `source` theme from ~/.zshrc as they won't be automatically called in the new shell.
+7. You may want to copy any configs from your `~/.bashrc` and `~/.bash_profile` files, or `source` them from ~/.zshrc as they won't be automatically called in the new shell.
 8. Import the gruvbox-dark iterm colors in to your iterm2 profile. Set it as the default profile.
 9. Modify your iterm profile to use Meslo LG S DZ Regular Nerd Font Complete (not Monospaced). You can use any nerd font here (comes with extra symbols), but I prefer Meslo!
 10. Close/open your terminal!
