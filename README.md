@@ -46,6 +46,8 @@ pip install jupyter_contrib_nbextensions
 jupyter contrib nbextension install --user
 pip install jupyter_nbextensions_configurator
 jupyter nbextensions_configurator enable --user
+# MANUAL: when you launch `jupyter notebook`, be sure to enable collapsible headings (and any other extension) in the nbextensions menu
+
 pip install fastai
 pip install sklearn
 
