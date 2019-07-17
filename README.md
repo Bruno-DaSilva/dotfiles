@@ -22,15 +22,18 @@ At the moment, this does not actually contained dotfiles, but just my current .z
 
 
 
-## Ubuntu server run:
+## Ubuntu 18.04 server (assumes nvidia and cuda are installed, preferably using a nvidia or pytorch image on a cloudprovider):
 ```
+####### NOTE: manually perform any `MANUAL` entries: #######
 ## zsh
 sudo apt install zsh
 ./setup_zsh.sh
+cp .zshrc ~/.zshrc
 
 ## nvtop
 ./setup_nvtop.sh
 
+## conda
 wget https://repo.anaconda.com/miniconda/Miniconda2-latest-Linux-x86_64.sh
 bash Miniconda2-latest-Linux-x86_64.sh
 
@@ -38,6 +41,8 @@ conda create -n fastai python=3.6
 ## MANUAL: Copy conda setup at the end of .bashrc to .zshrc
 ## MANUAL: Relog/re-ssh
 
+
+## fastai
 conda activate fastai
 # This might take a few mins, you can run the other commands in parallel if you'd like.
 conda install pytorch torchvision cudatoolkit=10.0 -c pytorch
