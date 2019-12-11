@@ -213,6 +213,10 @@ setopt pushd_minus              # Reference stack entries with '-'.
 
 setopt extended_glob
 
+# Misc
+setopt nobeep           # Disable terminal bell
+setopt autocd           # cd if only a directory name was entered
+
 # =============================================================================
 #                                   Aliases
 # =============================================================================
