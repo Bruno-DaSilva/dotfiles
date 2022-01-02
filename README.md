@@ -4,7 +4,7 @@ At the moment, this does not actually contained dotfiles, but just my current .z
 
 ## Install instructions
 1. `brew tap homebrew/cask-fonts`
-2. `brew cask install font-meslo-nerd-font`
+2. `brew install --cask font-meslo-lg-nerd-font`
 3. `brew install zplug`
 4. `brew install zsh`
 5. `./setup_zsh.sh`
